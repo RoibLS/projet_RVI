@@ -7,7 +7,7 @@ public class target_bbc : Target
     public override void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0f && variablesBallons.ballonBEclate){
+        if (health <= 0f && variablesBallons.ballonVEclate){
             variablesBallons.ballonBcEclate=true;
             die();
         }
