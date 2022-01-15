@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class target_bvi : Target
 {
+    public GameObject ascenseur;
+
     public override void TakeDamage(float amount)
     {
         health -= amount;
         if (health <= 0f && variablesBallons.ballonBcEclate){
             variablesBallons.ballonViEclate=true;
+            ascenseur.SetActive(true);
             die();
         }
     }
