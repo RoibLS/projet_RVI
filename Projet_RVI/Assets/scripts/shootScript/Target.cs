@@ -1,15 +1,16 @@
 
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public abstract class Target : MonoBehaviour
 {
-    public float health = 50f;
+    public float health = 1f;
 
-    public void TakeDamage(float amount)
+    public abstract void TakeDamage(float amount);
+    /*
     {
         health -= amount;
         if (health <= 0f) die();
-    }
+    }*/
 
     void die()
     {
