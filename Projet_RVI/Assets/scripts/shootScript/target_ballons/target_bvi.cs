@@ -9,7 +9,7 @@ public class target_bvi : Target
     public override void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0f && variablesBallons.ballonBcEclate){
+        if (health <= 0f && variablesBallons.ballonBEclate){
             variablesBallons.ballonViEclate=true;
             ascenseur.SetActive(true);
             die();

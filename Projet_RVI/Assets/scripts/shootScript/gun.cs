@@ -14,14 +14,15 @@ public class gun : MonoBehaviour
     private float nextTimeToFire = 0f;
 
     private AudioSource gun_sound;
-
+    private Recoil recoilComponent;
     void Start(){
+        recoilComponent= GetComponent<Recoil>();
         gun_sound=GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -31,11 +32,11 @@ public class gun : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
+        recoilComponent.StartRecoil(0.2f, 10f, 10f);
         muzzleflash.Play();
         gun_sound.Play();
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            
             Debug.Log(hit.transform.name);
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
@@ -48,7 +49,7 @@ public class gun : MonoBehaviour
             }
             GameObject impactGo=Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGo, 2f);
-            muzzleflash.Stop();
+            //muzzleflash.Stop();
         }
     }
 }
