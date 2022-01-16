@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/sceneProjetGLZomb.unity
+    path: Assets/Scenes/sceneProjetGLSalle3.unity
     guid: 029a223d9f0f3844983f23824aa6fe85
   m_configObjects:
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 2830a70e9c4919f40b296aa8c516d57b, type: 2}
