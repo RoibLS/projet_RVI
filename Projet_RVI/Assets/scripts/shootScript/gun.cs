@@ -7,7 +7,7 @@ public class gun : MonoBehaviour
     public float impactForce = 30f;
     public float fireRate = 5f;
 
-    public Camera fpsCam;
+    public GameObject fpsCam;
     public ParticleSystem muzzleflash;
     public GameObject impactEffect;
 
@@ -49,7 +49,6 @@ public class gun : MonoBehaviour
             }
             GameObject impactGo=Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGo, 2f);
-            //muzzleflash.Stop();
         }
     }
 }
