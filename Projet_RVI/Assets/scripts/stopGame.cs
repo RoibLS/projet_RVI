@@ -17,6 +17,6 @@ public class stopGame : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }
