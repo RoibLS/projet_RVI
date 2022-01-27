@@ -20,10 +20,12 @@ public class switchOnScreens : MonoBehaviour
     public GameObject ecran4;
     public GameObject ecran5;
     public GameObject ecran6;
-    public Texture my_img;
-    public Texture my_img2;
-    public Texture rainBow;
-    public Texture smiley;
+    public Texture camera1;
+    public Texture camera2;
+    public Texture k;
+    public Texture mai;
+    public Texture rat;
+    public Texture explication;
 
 
 
@@ -34,7 +36,9 @@ public class switchOnScreens : MonoBehaviour
         rand1 = ecran1.GetComponent<Renderer>();
         rand2 = ecran2.GetComponent<Renderer>();
         rand3 = ecran3.GetComponent<Renderer>();
+        rand4 = ecran4.GetComponent<Renderer>();
         rand5 = ecran5.GetComponent<Renderer>();
+        rand6 = ecran6.GetComponent<Renderer>();
 
     }
 
@@ -57,15 +61,12 @@ public class switchOnScreens : MonoBehaviour
         
         transform.Translate(Vector3.forward * Time.deltaTime);
 
-        rand1.material.mainTexture = rainBow;
-        rand2.material.mainTexture = my_img;
-        rand5.material.mainTexture = my_img2;
-        rand3.material.mainTexture = smiley;
-
-        //Destroy(ecran1);
-        //Destroy(ecran3);
-        Destroy(ecran4);
-        Destroy(ecran6);
+        rand1.material.mainTexture = camera1;
+        rand2.material.mainTexture = rat;
+        rand5.material.mainTexture = mai;
+        rand3.material.mainTexture = explication;
+        rand4.material.mainTexture = k;
+        rand6.material.mainTexture = camera2;
 
 
     }
