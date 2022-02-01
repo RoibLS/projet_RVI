@@ -17,7 +17,7 @@ public class switchSceens : MonoBehaviour
     public GameObject ecran4;
 
     public GameObject camera;
-    public GameObject ground;
+    public GameObject cameraBis;
 
     public Texture k;
     public Texture mai;
@@ -69,8 +69,12 @@ public class switchSceens : MonoBehaviour
         }
         else
         {
-            camera.transform.position =  new Vector3(-21.42f, 2.96f, -5.96f);
-            ground.transform.position = new Vector3(-21.42f, 2.96f, -5.96f);
+            /*camera.transform.position =  new Vector3(-21.42f, 2.96f, -5.96f);
+            ground.transform.position = new Vector3(-21.42f, 2.96f, -5.96f);*/
+
+            camera.SetActive(false);
+            cameraBis.SetActive(true);
+
         }
 
 

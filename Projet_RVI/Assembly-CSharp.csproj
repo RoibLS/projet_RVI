@@ -50,6 +50,7 @@
      <Compile Include="Assets\scripts\clignoteLumiere.cs" />
      <Compile Include="Assets\scripts\sci_fi_script\camera_transition.cs" />
      <Compile Include="Assets\scripts\stopGame.cs" />
+     <Compile Include="Assets\scripts\sci_fi_script\switchSreens3.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\scripts\scriptsPerso\mouseLook.cs" />
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_bvi.cs" />
      <Compile Include="Assets\deleteEyeLid.cs" />
+     <Compile Include="Assets\scripts\sci_fi_script\switchScreens2.cs" />
      <Compile Include="Assets\MapShoot\Cartoon SportCar B01\script\OpenElement.cs" />
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_bj.cs" />
      <Compile Include="Assets\Revolving Door\Scripts\DoorRotation.cs" />
@@ -76,6 +78,7 @@
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_br.cs" />
      <Compile Include="Assets\scripts\shootScript\gun.cs" />
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_bv.cs" />
+     <Compile Include="Assets\scripts\sci_fi_script\switchSceens.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\MapShoot\Cartoon SportCar B01\script\brake_light.cs" />
      <Compile Include="Assets\startGame.cs" />
