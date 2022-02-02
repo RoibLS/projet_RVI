@@ -90,6 +90,7 @@
      <Compile Include="Assets\scripts\shootScript\target_ballons\variablesBallons.cs" />
      <Compile Include="Assets\MapShoot\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_bbc.cs" />
+     <Compile Include="Assets\scripts\sci_fi_script\CamraSwitch.cs" />
      <Compile Include="Assets\scripts\shootScript\target_ballons\target_bo.cs" />
      <Compile Include="Assets\MapShoot\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
      <None Include="Assets\MapShoot\Toon Gas Station\ToonShading\Shaders\ToonBasicOutline.shader" />
