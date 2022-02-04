@@ -19,20 +19,20 @@ public class CamraSwitch : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             if (cam1.activeSelf)
             {
                 cam1.SetActive(false);
                 cam2.SetActive(true);
             }
-            else
-            {
+            else if(cam2.activeSelf){
+                cam2.SetActive(false);
+                perso.SetActive(true);
 
             }
 
         }
-        
 
     }
 }

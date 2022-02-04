@@ -24,6 +24,10 @@ public class switchScreens2 : MonoBehaviour
     public Texture nonValide;
     public Texture valide;
 
+    public static bool rebuFinished;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,8 @@ public class switchScreens2 : MonoBehaviour
         rand2 = ecran2.GetComponent<Renderer>();
         rand3 = ecran3.GetComponent<Renderer>();
         rand4 = ecran4.GetComponent<Renderer>();
+
+        rebuFinished=false;
     }
 
     // Update is called once per frame
@@ -41,9 +47,11 @@ public class switchScreens2 : MonoBehaviour
 
     void success()
     {
+        
         if (rand1.material.mainTexture == k && rand2.material.mainTexture == mai && rand3.material.mainTexture == rat)
         {
             rand4.material.mainTexture = valide;
+            rebuFinished=true;
         }
         else
         {
