@@ -32,13 +32,7 @@ public class switchOnScreens : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(waiter());
-        rand1 = ecran1.GetComponent<Renderer>();
-        rand2 = ecran2.GetComponent<Renderer>();
-        rand3 = ecran3.GetComponent<Renderer>();
-        rand4 = ecran4.GetComponent<Renderer>();
-        rand5 = ecran5.GetComponent<Renderer>();
-        rand6 = ecran6.GetComponent<Renderer>();
+        
 
     }
 
@@ -47,19 +41,14 @@ public class switchOnScreens : MonoBehaviour
     {
     }
 
-
-    IEnumerator waiter()
+    public void switchOn()
     {
-        yield return new WaitForSeconds(1);
-    }
-
-    void OnMouseDown()
-    {
-        transform.Translate(-Vector3.forward * Time.deltaTime);
-
-        waiter();
-        
-        transform.Translate(Vector3.forward * Time.deltaTime);
+        rand1 = ecran1.GetComponent<Renderer>();
+        rand2 = ecran2.GetComponent<Renderer>();
+        rand3 = ecran3.GetComponent<Renderer>();
+        rand4 = ecran4.GetComponent<Renderer>();
+        rand5 = ecran5.GetComponent<Renderer>();
+        rand6 = ecran6.GetComponent<Renderer>();
 
         rand1.material.mainTexture = camera1;
         rand2.material.mainTexture = rat;
@@ -68,7 +57,12 @@ public class switchOnScreens : MonoBehaviour
         rand4.material.mainTexture = k;
         rand6.material.mainTexture = camera2;
 
+    }
 
+
+    void OnMouseDown()
+    {
+        switchOn();
     }
 
 

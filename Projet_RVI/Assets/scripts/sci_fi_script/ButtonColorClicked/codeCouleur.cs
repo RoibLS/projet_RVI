@@ -46,9 +46,28 @@ public class codeCouleur : MonoBehaviour
                     UnityEditor.EditorApplication.isPlaying = false;
                 }
             }
+            else if(marron == true)
+            {
+                vert = false;
+                rouge = false;
+                marron = false;
+                bleu = false;
+                jaune = false;
+                noir = false;
+            }
         }
-        
-        
-        
+        else
+        {
+            vert = false;
+            rouge = false;
+            marron = false;
+            bleu = false;
+            jaune = false;
+            noir = false;
+        }
     }
+        
+        
+        
+
 }

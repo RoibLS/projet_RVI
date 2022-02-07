@@ -61,10 +61,9 @@ public class switchSceens : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+
+    public void switchPictures()
     {
-
-
         if (!(rand1.material.mainTexture == k && rand2.material.mainTexture == mai && rand3.material.mainTexture == rat))
         {
             temp = rand1.material.mainTexture;
@@ -79,9 +78,12 @@ public class switchSceens : MonoBehaviour
             cameraBis.SetActive(true);
 
         }
+    }
 
 
-        
+    void OnMouseDown()
+    {
+        switchPictures();
     }
 
 

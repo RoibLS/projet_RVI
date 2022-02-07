@@ -16,8 +16,13 @@ public class clickBlack : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    public void activeNoir()
     {
         codeCouleur.noir = true;
+    }
+
+    void OnMouseDown()
+    {
+        activeNoir();
     }
 }

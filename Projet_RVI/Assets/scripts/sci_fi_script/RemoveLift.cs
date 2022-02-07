@@ -20,9 +20,14 @@ public class RemoveLift : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    public void removeDoors()
     {
         Destroy(plane);
         Destroy(lift);
+    }
+
+    void OnMouseDown()
+    {
+        removeDoors();
     }
 }

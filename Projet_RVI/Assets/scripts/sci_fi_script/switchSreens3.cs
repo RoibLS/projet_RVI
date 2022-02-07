@@ -62,7 +62,7 @@ public class switchSreens3 : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    public void switchPictures()
     {
         if (!(rand1.material.mainTexture == k && rand2.material.mainTexture == mai && rand3.material.mainTexture == rat))
         {
@@ -76,6 +76,12 @@ public class switchSreens3 : MonoBehaviour
         {
 
         }
+    }
+
+
+    void OnMouseDown()
+    {
+        switchPictures();
     }
 
 
