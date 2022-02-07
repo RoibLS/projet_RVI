@@ -11,20 +11,27 @@ public class gunXR : MonoBehaviour
     public float impactForce = 30f;
     public float fireRate = 15f;
 
-    public Camera fpsCam;
     public ParticleSystem muzzleflash;
     public GameObject impactEffect;
     
     public UnityEngine.XR.InputDevice controller;
-
+    private Recoil recoilComponent;
+    private AudioSource gun_sound;
     private float nextTimeToFire = 0f;
     
 
+    void Start(){
+        recoilComponent= GetComponent<Recoil>();
+        gun_sound=GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
+        var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+
         bool triggerValue;
-        if (controller.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue && Time.time >= nextTimeToFire)
+        if (leftHandDevices[0].TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton ,out triggerValue) && triggerValue && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -33,25 +40,9 @@ public class gunXR : MonoBehaviour
 
     void Shoot()
     {
-        
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-        {
-            muzzleflash.Play();
-            Debug.Log(hit.transform.name);
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
-            {
-                target.TakeDamage(damage);
-            }
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-            GameObject impactGo=Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGo, 2f);
-            muzzleflash.Stop();
-        }
+        recoilComponent.StartRecoil(0.2f, 10f, 10f);
+        muzzleflash.Play();
+        gun_sound.Play();
     }
     
 }
