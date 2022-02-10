@@ -390,7 +390,7 @@ public class Scene1_loadscene_Grab : XRBaseInteractable
     /// <param name="interactor">Interactor that is initiating the selection.</param>
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
-        SceneManager.LoadScene("sceneProjetGLSalle3");
+        SceneManager.LoadScene("Demo");
     }
 
     /// <summary>This method is called by the interaction manager 
