@@ -14,7 +14,7 @@ public class gunXR : MonoBehaviour
     public ParticleSystem muzzleflash;
     public GameObject impactEffect;
     
-    public UnityEngine.XR.InputDevice controller;
+
     private Recoil recoilComponent;
     private AudioSource gun_sound;
     private float nextTimeToFire = 0f;

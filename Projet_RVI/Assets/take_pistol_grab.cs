@@ -12,8 +12,12 @@ namespace UnityEngine.XR.Interaction.Toolkit
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody))]
 [AddComponentMenu("XR/XR Grab Interactable")]
-public class kill_ballon_grab_bvi : XRBaseInteractable
+public class take_pistol_grab : XRBaseInteractable
 {
+    public GameObject controllerTir;
+    public GameObject controllerClick;
+    public GameObject pistoletTable;
+
     const float k_DefaultTighteningAmount = 0.5f;
     const float k_DefaultSmoothingAmount = 5f;
     const float k_VelocityPredictionFactor = 0.6f;
@@ -389,10 +393,9 @@ public class kill_ballon_grab_bvi : XRBaseInteractable
     /// <param name="interactor">Interactor that is initiating the selection.</param>
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
-        if (variablesBallons.ballonBEclate){
-            variablesBallons.ballonViEclate=true;
-            Destroy(gameObject);
-        }
+        controllerTir.SetActive(true);
+        controllerClick.SetActive(false);
+        pistoletTable.SetActive(false);
     }
 
     /// <summary>This method is called by the interaction manager 
