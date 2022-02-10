@@ -43,7 +43,7 @@ public class codeCouleur : MonoBehaviour
                 if (marron == true)
                 {
                     Application.Quit();
-                    UnityEditor.EditorApplication.isPlaying = false;
+                    //UnityEditor.EditorApplication.isPlaying = false;
                 }
             }
             else if(marron == true)
