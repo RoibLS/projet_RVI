@@ -15,6 +15,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
 public class kill_ballon_grab_br : XRBaseInteractable
 {
 
+    public GameObject controller;
     const float k_DefaultTighteningAmount = 0.5f;
     const float k_DefaultSmoothingAmount = 5f;
     const float k_VelocityPredictionFactor = 0.6f;
@@ -390,8 +391,10 @@ public class kill_ballon_grab_br : XRBaseInteractable
     /// <param name="interactor">Interactor that is initiating the selection.</param>
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
-        variablesBallons.ballonREclate=true;
-        Destroy(gameObject);
+        if (controller.activeSelf){
+            variablesBallons.ballonREclate=true;
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>This method is called by the interaction manager 
