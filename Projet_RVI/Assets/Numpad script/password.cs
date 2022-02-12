@@ -15,7 +15,7 @@ public class password : MonoBehaviour
     public Material mato;
     public Material matr;
 
-    private int[] pwd = {0,0,0,0} ;
+    private int[] pwd = {6,9,2,7} ;
     private static int[] result = {-1,0,0,0} ;
     //prendre en paramètres les 4 lettres indicatives du remplissage des chiffres
 
