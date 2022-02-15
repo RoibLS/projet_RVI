@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class codeCouleur : MonoBehaviour
@@ -43,7 +43,7 @@ public class codeCouleur : MonoBehaviour
             {
                 if (marron == true)
                 {
-                    //SceneManager.LoadScene("sceneProjetGLSalle3");
+                    SceneManager.LoadScene("scene3");
                     //UnityEditor.EditorApplication.isPlaying = false;
                 }
             }

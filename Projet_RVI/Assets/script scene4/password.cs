@@ -59,7 +59,7 @@ public class password : MonoBehaviour
                 OpenDoor.goodcode = true;
 
                 //on active le cube qui sert de collider à l'ascenseur
-                colliderLift.SetActive(true);
+                //colliderLift.SetActive(true);
                 
             }
         }        

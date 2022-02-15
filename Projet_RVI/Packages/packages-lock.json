@@ -150,7 +150,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/aline/OneDrive/Documents/GitHub/projet_RVI/xr rig",
+      "version": "file:C:/Users/diedh/Documents/GitHub/projet_RVI/xr rig",
       "depth": 0,
       "source": "local",
       "dependencies": {

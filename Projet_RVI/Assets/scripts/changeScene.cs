@@ -12,7 +12,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody))]
 [AddComponentMenu("XR/XR Grab Interactable")]
-public class Scene1_loadscene_Grab : XRBaseInteractable
+public class changeScene : XRBaseInteractable
 {
 
     const float k_DefaultTighteningAmount = 0.5f;
@@ -384,13 +384,13 @@ public class Scene1_loadscene_Grab : XRBaseInteractable
         m_InteractorLocalPosition = localAttachOffset;
         m_InteractorLocalRotation = Quaternion.Inverse(Quaternion.Inverse(m_RigidBody.rotation) * attachTransform.rotation);
     }
-
+    public string nom="";
     /// <summary>This method is called by the interaction manager 
     /// when the interactor first initiates selection of an interactable.</summary>
     /// <param name="interactor">Interactor that is initiating the selection.</param>
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene(nom);
     }
 
     /// <summary>This method is called by the interaction manager 
