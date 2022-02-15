@@ -391,7 +391,7 @@ public class loadFinalScene : XRBaseInteractable
     protected override void OnSelectEnter(XRBaseInteractor interactor)
     {
         //chargement de la scene finale
-        //SceneManager.LoadScene("sceneEnd");
+        SceneManager.LoadScene("sceneEnd");
     }
 
     /// <summary>This method is called by the interaction manager 
